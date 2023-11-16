@@ -20,8 +20,8 @@ class _LoginPageState extends State<LoginPage> {
             begin: Alignment.topRight,
             end: Alignment.bottomLeft,
             colors: [
-              Colors.blue,
-              Colors.cyan,
+              Colors.white,
+              Colors.white,
             ],
           )),
       child: Scaffold(
@@ -55,10 +55,7 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget _icon() {
     return Container(
-      decoration: BoxDecoration(
-          border: Border.all(color: Colors.white, width: 2),
-          shape: BoxShape.circle),
-      child: const Icon(Icons.person, color: Colors.white, size: 120),
+      child: Image.asset("assets/images/logoku.png"),
     );
   }
 
@@ -66,14 +63,14 @@ class _LoginPageState extends State<LoginPage> {
       {isPassword = false}) {
     var border = OutlineInputBorder(
         borderRadius: BorderRadius.circular(18),
-        borderSide: const BorderSide(color: Colors.white));
+        borderSide: const BorderSide(color: Colors.blueAccent));
 
     return TextField(
-      style: const TextStyle(color: Colors.white),
+      style: const TextStyle(color: Colors.blueAccent),
       controller: controller,
       decoration: InputDecoration(
         hintText: hintText,
-        hintStyle: const TextStyle(color: Colors.white),
+        hintStyle: const TextStyle(color: Colors.blueAccent),
         enabledBorder: border,
         focusedBorder: border,
       ),
@@ -88,13 +85,13 @@ class _LoginPageState extends State<LoginPage> {
         );
       },
       style: ElevatedButton.styleFrom(
-        foregroundColor: Colors.blue, backgroundColor: Colors.white, shape: const StadiumBorder(),
+        foregroundColor: Colors.white, backgroundColor: Colors.blueAccent, shape: const StadiumBorder(),
         padding: const EdgeInsets.symmetric(vertical: 16),
       ),
       child: const SizedBox(
           width: double.infinity,
           child: Text(
-            "Sign in ",
+            "Masuk ",
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 20),
           )),
@@ -103,9 +100,9 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget _extraText() {
     return const Text(
-      "Can't access to your account?",
+      "Tidak Bisa Mengakses Akun?",
       textAlign: TextAlign.center,
-      style: TextStyle(fontSize: 16, color: Colors.white),
+      style: TextStyle(fontSize: 16, color: Colors.blueAccent),
     );
   }
 }
